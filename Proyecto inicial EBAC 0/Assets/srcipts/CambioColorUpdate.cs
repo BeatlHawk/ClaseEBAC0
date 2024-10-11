@@ -2,13 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class componente1 : MonoBehaviour
+public class CambioColorUpdate : MonoBehaviour
 {
-    private void Awake()
-    {
-        miObjeto = this.gameObject;
-    }
-    public static GameObject miObjeto;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +13,7 @@ public class componente1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Color c = new Color(Random.value, Random.value, Random.value);
+        GetComponent<MeshRenderer>().material.color = c;
     }
 }

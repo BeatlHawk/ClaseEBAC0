@@ -2,21 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class componente2 : MonoBehaviour
+public class DadoUpdate : MonoBehaviour
 {
-    private void Awake()
-    {
-        
-    }
+    public GameObject PrefabDado;
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(componente1.miObjeto.name);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Instantiate(PrefabDado, transform.position, Quaternion.identity);
     }
 }
